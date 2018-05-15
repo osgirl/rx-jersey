@@ -61,7 +61,7 @@ public abstract class RxGenericBodyWriter implements MessageBodyWriter<Object> {
             Class rawType = raw((ParameterizedType) genericType);
             return allowedTypes.contains(rawType);
         }
-        return false;
+        return allowedTypes.contains(genericType);
     }
 
     @Override
